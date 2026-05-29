@@ -36,7 +36,7 @@ export default function Booking() {
   const fetchBookedTimes = async (selectedDate) => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/bookings/date/${selectedDate}`,
+        `https://barbershop-app-blush.vercel.app//api/bookings/date/${selectedDate}`,
       );
 
       setBookedTimes(res.data.map((booking) => booking.time));
