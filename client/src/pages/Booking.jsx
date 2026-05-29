@@ -62,7 +62,10 @@ export default function Booking() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/bookings", formData);
+      await axios.post(
+        "https://barbershop-app-h9lp.onrender.com/api/bookings",
+        formData,
+      );
 
       alert("Termin erfolgreich gebucht!");
 

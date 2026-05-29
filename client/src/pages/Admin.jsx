@@ -15,7 +15,9 @@ export default function Admin() {
 
   const fetchBookings = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/bookings");
+      const res = await axios.get(
+        "https://barbershop-app-h9lp.onrender.com/api/bookings",
+      );
 
       setBookings(res.data);
     } catch (error) {
@@ -29,7 +31,9 @@ export default function Admin() {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/bookings/${id}`);
+      await axios.delete(
+        `https://barbershop-app-h9lp.onrender.com/api/bookings/${id}`,
+      );
 
       setBookings(bookings.filter((booking) => booking._id !== id));
     } catch (error) {
